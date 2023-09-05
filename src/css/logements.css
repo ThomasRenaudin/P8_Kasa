@@ -1,0 +1,58 @@
+.Logements {
+  display: flex;
+  flex-direction: row;
+  width: 86%;
+  margin: 0 auto;
+  gap: 4%;
+  flex-wrap: wrap;
+  padding: 4%;
+}
+.Logements__container {
+  width: 30%;
+  max-height: 340px;
+  position: relative;
+  margin-bottom: 50px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.Logements__container--image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Logements__container--titre {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-color: rgb(255, 96, 96);
+  color: white;
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 0.7em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%; /* 25.668px */
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.Logements__container:hover .Logements__container--titre {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+@media screen and (max-width: 768px) {
+  .Logements {
+    flex-direction: column;
+  }
+  .Logements__container {
+    width: 100%;
+  }
+}/*# sourceMappingURL=logements.css.map */

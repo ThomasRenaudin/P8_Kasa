@@ -1,0 +1,41 @@
+.navbar{
+    display : flex;
+    flex-direction : row;
+    align-items: center;
+    justify-content: space-between;
+    width : 86%;
+    margin : 0 auto;
+    margin-bottom: 50px;
+    &__liens{
+        text-align: right;
+        font-family: Montserrat;
+        font-size: 1.5em;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%; /* 34.224px */
+        display : flex;
+        gap : 50px;
+        & a{
+            text-decoration: none;
+            color : #FF6060;
+            &:hover{
+                text-decoration: underline;
+            }    
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        &__liens{
+            font-size: 0.75em;
+        }
+        &__logo{
+            &--image{
+                width: 145px;
+                height: 46.881px;
+                flex-shrink: 0;
+            }
+        }
+    }
+  }

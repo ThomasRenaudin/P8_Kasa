@@ -1,0 +1,62 @@
+.Logements {
+  display: flex;
+  flex-direction: row;
+  width: 86%;
+  margin: 0 auto;
+  gap: 4%;
+  flex-wrap: wrap;
+  padding: 4%;
+
+  &__container {
+    width: 30%;
+    max-height: 340px;
+    position: relative;
+    margin-bottom: 50px;
+    overflow: hidden;
+    border-radius: 10px;
+
+    &--image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--titre {
+      position: absolute;
+      bottom: 0; // Position en bas du conteneur parent
+      left: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
+      background-color: rgba(255, 96, 96, 1);
+      color: white;
+      padding: 10px;
+      margin: 0;
+      width: 100%;
+      box-sizing: border-box;
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 0.7em;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142.6%; /* 25.668px */
+      opacity: 0; // Cacher par défaut
+      transform: translateY(100%); // Cacher en bas
+      transition: opacity 0.3s ease, transform 0.3s ease; // Transition en douceur
+    }
+
+    
+  }
+}
+
+.Logements__container:hover .Logements__container--titre{
+      opacity: 1; // Afficher au survol
+      transform: translateY(0%); // Glisser vers le haut au survol
+}
+
+@media screen and (max-width: 768px){
+  .Logements{
+      flex-direction: column;
+      &__container{
+        width: 100%;
+      }
+  }
+}

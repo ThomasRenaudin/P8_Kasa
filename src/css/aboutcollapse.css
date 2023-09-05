@@ -1,0 +1,65 @@
+.AboutCollapse {
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AboutCollapse__titlecontainer {
+  width: 86%;
+  height: 52px;
+  border-radius: 5px;
+  background: var(--Red, #FF6060);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.AboutCollapse__titlecontainer--arrow {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+.AboutCollapse__titlecontainer--title {
+  padding-left: 10px;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%; /* 25.668px */
+}
+.AboutCollapse__textcontainer {
+  background: var(--Gray, #F6F6F6);
+  width: 86%;
+  border-radius: 10px;
+}
+.AboutCollapse__textcontainer--text {
+  color: #FF6060;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.6%; /* 25.668px */
+  margin: 10px 20px;
+}
+
+.Page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.AboutCollapse__textcontainer {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease;
+}
+
+.AboutCollapse__textcontainer.open {
+  max-height: 200px;
+  transition: max-height 1s ease-in-out;
+}/*# sourceMappingURL=aboutcollapse.css.map */

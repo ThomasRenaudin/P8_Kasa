@@ -1,0 +1,34 @@
+.ErrorpageFlexbox {
+  margin-top: 59px;
+  margin-bottom: 59px;
+  display: Flex;
+  flex-direction: column;
+  gap: 139px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #FF6060;
+  text-align: center;
+  font-family: Montserrat;
+}
+.ErrorpageFlexbox__404 {
+  font-size: 16em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-weight: 700;
+  line-height: 142.6%; /* 410.688px */
+}
+.ErrorpageFlexbox__Oups {
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%; /* 51.336px */
+}
+.ErrorpageFlexbox__Back {
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%; /* 25.668px */
+  text-decoration-line: underline;
+  color: #FF6060;
+}/*# sourceMappingURL=Errorpage.css.map */

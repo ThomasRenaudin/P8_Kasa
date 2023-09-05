@@ -1,0 +1,33 @@
+.Footer{
+    background-color: black;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap : 15px;
+    padding-top : 60px;
+    &__mentions{
+        color: #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.5em;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%; /* 34.224px */
+    }
+}
+
+@media screen and (max-width: 768px){
+    .Footer{
+        &__logo{
+            width: 122px;
+            height: 39.444px;
+            flex-shrink: 0;
+        }
+        &__mentions{ 
+            font-size: 12px;
+            width : 35%;
+            margin-bottom: 60px;
+        }
+    }
+}

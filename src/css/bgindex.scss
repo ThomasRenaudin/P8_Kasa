@@ -1,0 +1,70 @@
+.Bgindex{
+    display : flex;
+    width : 86%;
+    margin : 0 auto;
+    height : 223px;
+    margin-bottom: 80px;
+    &__container{
+        width: 100%;
+        height: 100%;
+        overflow: hidden; 
+        position : relative;
+        &--image{
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            border-radius: 25px;            
+        }
+        &--sloggan{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5em;
+            color: white;
+            text-align: center;
+            width: 100%;
+            height : 100%;
+            z-index: 1; /* Met l'élément de texte au premier plan */
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            border-radius: 25px;   
+            display : flex;
+            justify-content: center;
+            align-items: center;
+            color: #FFF;
+            font-family: Montserrat;
+            font-size: 3.3em;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 142.6%; /* 68.448px */         
+        }
+        &--flou{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height : 100%;
+            width : 100%;
+            border-radius : 25px;
+            opacity: 0.3;
+            background: #000;
+            mix-blend-mode: darken
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .Bgindex{
+        margin-bottom: 20px;
+        height : auto;
+        &__container{
+            height: 111px;
+            &--sloggan{
+                font-size: 24px;
+                text-align: left;
+                margin: auto 16px;
+            }
+        }
+    }
+}

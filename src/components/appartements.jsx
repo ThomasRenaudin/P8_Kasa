@@ -2,10 +2,12 @@ import * as React from "react";
 import { useState } from "react";
 import "../css/Appartements.css";
 import logementsData from '../backend.json';
-import { Redirect } from "react-router-dom";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Appartements() {
+
+  // 
+  const navigate = useNavigate();
 
   // Récupération des données VIA URL
   const pathArray = window.location.pathname.split('/');
@@ -27,7 +29,7 @@ function Appartements() {
 
  const [counter, setCounter] = useState(1);
   if (!appartement) {
-    Navigate("/404");
+    return navigate("/404");
   };
 
 
@@ -142,13 +144,13 @@ function AboutCollapse({ title, content }) {
   const arrowImageSrc = isMenuOpen ? '/arrowdown.png' : '/arrowup.svg';
 
   return (
-    <div className="AboutCollapse">
-      <div className="AboutCollapse__titlecontainer" onClick={toggleMenu}>
-        <h3 className="AboutCollapse__titlecontainer--title">{title}</h3>
-        <img className={`AboutCollapse__titlecontainer--arrow ${isMenuOpen ? 'open' : ''}`} src={arrowImageSrc} alt="Arrow" />
+    <div className="AppartementCollapse">
+      <div className="AppartementCollapse__titlecontainer" onClick={toggleMenu}>
+        <h3 className="AppartementCollapse__titlecontainer--title">{title}</h3>
+        <img className={`AppartementCollapse__titlecontainer--arrow ${isMenuOpen ? 'open' : ''}`} src={arrowImageSrc} alt="Arrow" />
       </div>
-      <div className={`AboutCollapse__textcontainer ${isMenuOpen ? 'open' : ''}`}>
-        <p className="AboutCollapse__textcontainer--text">{content}</p>
+      <div className={`AppartementCollapse__textcontainer ${isMenuOpen ? 'open' : ''}`}>
+        <p className="AppartementCollapse__textcontainer--text">{content}</p>
       </div>
     </div>
   );

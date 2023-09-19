@@ -26,7 +26,6 @@
       bottom: 0; // Position en bas du conteneur parent
       left: 0;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
-      background-color: rgba(255, 96, 96, 1);
       color: white;
       padding: 10px;
       margin: 0;
@@ -34,22 +33,27 @@
       box-sizing: border-box;
       color: #FFF;
       font-family: Montserrat;
-      font-size: 0.7em;
+      font-size: 18px;
       font-style: normal;
       font-weight: 500;
       line-height: 142.6%; /* 25.668px */
-      opacity: 0; // Cacher par défaut
-      transform: translateY(100%); // Cacher en bas
-      transition: opacity 0.3s ease, transform 0.3s ease; // Transition en douceur
+    }
+
+    &--flou{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height : 100%;
+      width : 100%;
+      opacity: 0.3;
+      border-radius: 10px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
+      mix-blend-mode: darken
     }
 
     
   }
-}
-
-.Logements__container:hover .Logements__container--titre{
-      opacity: 1; // Afficher au survol
-      transform: translateY(0%); // Glisser vers le haut au survol
 }
 
 @media screen and (max-width: 768px){

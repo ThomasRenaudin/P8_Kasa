@@ -26,7 +26,6 @@
   bottom: 0;
   left: 0;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-color: rgb(255, 96, 96);
   color: white;
   padding: 10px;
   margin: 0;
@@ -34,18 +33,22 @@
   box-sizing: border-box;
   color: #FFF;
   font-family: Montserrat;
-  font-size: 0.7em;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 142.6%; /* 25.668px */
-  opacity: 0;
-  transform: translateY(100%);
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
-.Logements__container:hover .Logements__container--titre {
-  opacity: 1;
-  transform: translateY(0%);
+.Logements__container--flou {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  mix-blend-mode: darken;
 }
 
 @media screen and (max-width: 768px) {

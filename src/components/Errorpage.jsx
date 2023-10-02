@@ -3,7 +3,7 @@ import "../css/Errorpage.css";
 
 
 
-function Errorpage() {
+function MessageErreur() {
   return (
     <div className="ErrorpageFlexbox">
         <p className='ErrorpageFlexbox__404'>404</p>
@@ -13,4 +13,4 @@ function Errorpage() {
   )
 }
 
-export default Errorpage
+export default MessageErreur;

@@ -62,4 +62,8 @@
 .AboutCollapse__textcontainer.open {
   max-height: 200px;
   transition: max-height 1s ease-in-out;
+}
+
+.Largeurmenus {
+  width: 86%;
 }/*# sourceMappingURL=aboutcollapse.css.map */

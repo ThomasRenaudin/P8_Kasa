@@ -2,16 +2,14 @@ import * as React from "react";
 import { useState } from "react";
 import "../css/Appartements.css";
 import logementsData from '../backend.json';
-import { useNavigate } from "react-router-dom";
+import Collapse from "./molecules/collapse";
 
-function Appartements() {
+function Appartements(appartementsProps) {
 
-  // 
-  const navigate = useNavigate();
 
-  // Récupération des données VIA URL
-  const pathArray = window.location.pathname.split('/');
-  const id = pathArray[pathArray.length - 1];
+  // Récupération des données VIA argument
+ 
+  const id = appartementsProps.id;
   const appartement = logementsData.find(logement => logement.id === id);
 
   // Déclaration des contenus du menu
@@ -27,11 +25,9 @@ function Appartements() {
   };
 
 
- const [counter, setCounter] = useState(1);
-  if (!appartement) {
-    return navigate("/404");
-  };
+// Gestion du compteur pour le carroussel
 
+ const [counter, setCounter] = useState(1);
 
 
   const incrementCounter = () => {
@@ -43,6 +39,8 @@ function Appartements() {
   };
 
   const numberOfPhotos = appartement.pictures.length;
+
+  // Gestion de la structure de la page d'un appartement
 
   return (
     <div className="AppartementsFlexbox">
@@ -117,44 +115,28 @@ function Appartements() {
       <div className="AppartementsFlexbox__Equipements">
       </div>
       
+      {
+
       <div className="AppartementsFlexbox__Dropdowns">
         <div className="AppartementsFlexbox__Dropdowns--menus">
-          <AboutCollapse {...menu1} />
+          <Collapse menuContent={menu1} className=""/>
         </div>
         <div className="AppartementsFlexbox__Dropdowns--menus">
-          <AboutCollapse {...menu2} />
-        </div>
-      
+          <Collapse menuContent={menu2} className="" />
+        </div>  
       </div>
-
+    }
 
     </div>
     
   );
 }
 
-function AboutCollapse({ title, content }) {
-  // État pour gérer l'ouverture/fermeture du menu
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Fonction pour basculer l'état du menu
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-  const arrowImageSrc = isMenuOpen ? '/arrowdown.png' : '/arrowup.svg';
 
-  return (
-    <div className="AppartementCollapse">
-      <div className="AppartementCollapse__titlecontainer" onClick={toggleMenu}>
-        <h3 className="AppartementCollapse__titlecontainer--title">{title}</h3>
-        <img className={`AppartementCollapse__titlecontainer--arrow ${isMenuOpen ? 'open' : ''}`} src={arrowImageSrc} alt="Arrow" />
-      </div>
-      <div className={`AppartementCollapse__textcontainer ${isMenuOpen ? 'open' : ''}`}>
-        <p className="AppartementCollapse__textcontainer--text">{content}</p>
-      </div>
-    </div>
-  );
-}
+
+
+
 
 
 export default Appartements;

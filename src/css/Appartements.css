@@ -179,6 +179,7 @@
   position: absolute;
   right: 20px;
   top: 10px;
+  transition: transform 0.3s ease;
 }
 .AppartementCollapse__titlecontainer--title {
   padding-left: 10px;
@@ -216,6 +217,11 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 1s ease;
+  margin-bottom: 40px;
+}
+
+.AppartementCollapse__titlecontainer--arrow.open {
+  transform: rotate(180deg);
 }
 
 .AppartementCollapse__textcontainer.open {

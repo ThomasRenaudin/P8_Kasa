@@ -1,18 +1,24 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import Bgindex from '../components/bgindex';
+import React from 'react';
+import Navbar from '../components/Navbar';
+import Bgimage from '../components/molecules/backgroundimg';
 import Logements from '../components/logements';
 import Footer from '../components/footer';
 
 const Homepage = () => {
-    return(
-        <div>
-        <Navbar />
-        <Bgindex />
-        <Logements />
-        <Footer />
-    </div>
-    )
-}
+  // Définition de l'image
+  const backgroundImage = {
+    src: "/backgroundindex.png",
+    alt: "chutes du Niagara"
+  };
 
-export default Homepage
+  return (
+    <div>
+      <Navbar />
+      <Bgimage slogantiltle={"Chez vous, partout et ailleurs"} image={backgroundImage} />
+      <Logements />
+      <Footer />
+    </div>
+  );
+};
+
+export default Homepage;

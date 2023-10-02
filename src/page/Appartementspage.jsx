@@ -1,19 +1,30 @@
 import React from 'react'
+import { useParams, Navigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import Bgindex from '../components/bgindex';
-import Logements from '../components/logements';
+import Appartements from '../components/appartements';
 import Footer from '../components/footer';
+import logementsData from '../backend.json';
+
 
 const Appartementspage = () => {
-    return(
-        <div>
-            <Navbar/>
-            <Appartements/>
-            <Footer/>
-        </div>
-    )
-}
-
-// Récupération de l'ID via UseParam depuis react Router DOM
-
-export default Appartementspage
+    const { id } = useParams();
+  
+    // Vérification de l'ID existe dans le fichier backend.json
+    const appartement = logementsData.find(logement => logement.id === id);
+  
+    if (!appartement) {
+      // Si l'ID n'existe pas, redirection 404
+      return <Navigate to="/404" />;
+    }
+  
+    // Si l'ID existe, Affichage
+    return (
+      <div>
+        <Navbar />
+        <Appartements id={id} />
+        <Footer />
+      </div>
+    );
+  };
+  
+  export default Appartementspage;

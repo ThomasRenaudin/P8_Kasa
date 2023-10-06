@@ -21,7 +21,7 @@ const Appartementspage = () => {
     return (
       <div>
         <Navbar />
-        <Appartements id={id} />
+        <Appartements appartement={appartement} />
         <Footer />
       </div>
     );

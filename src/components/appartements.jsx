@@ -4,13 +4,7 @@ import "../css/Appartements.css";
 import logementsData from '../backend.json';
 import Collapse from "./molecules/collapse";
 
-function Appartements(appartementsProps) {
-
-
-  // Récupération des données VIA argument
- 
-  const id = appartementsProps.id;
-  const appartement = logementsData.find(logement => logement.id === id);
+function Appartements({ appartement }) {
 
   // Déclaration des contenus du menu
 

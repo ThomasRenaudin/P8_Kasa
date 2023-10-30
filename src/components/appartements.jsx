@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
 import "../css/Appartements.css";
-import logementsData from '../backend.json';
 import Collapse from "./molecules/collapse";
 
 function Appartements({ appartement }) {

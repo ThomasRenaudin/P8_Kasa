@@ -21,6 +21,9 @@
   text-decoration: none;
   color: #FF6060;
 }
+.navbar__liens a.active {
+  text-decoration: underline;
+}
 .navbar__liens a:hover {
   text-decoration: underline;
 }
